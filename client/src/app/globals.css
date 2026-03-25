@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f0e6;
+  min-height: 100vh;
+  color: #2c1810;
+}
+
+/* Professional Brown & Green Theme */
+:root {
+  --primary-brown: #5c3b2a;
+  --primary-green: #4a6b3f;
+  --cream: #faf7f0;
+  --light-cream: #fffbf5;
+  --dark-brown: #3a2418;
+  --light-brown: #8b5a3c;
+  --sage-green: #6b8c5c;
+  --warm-gray: #e8e0d5;
+  --accent-gold: #c9a87c;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e8e0d5;
+  background: var(--light-cream);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #faf7f0 0%, #f5efe5 100%);
+  border-bottom: 2px solid var(--sage-green);
+  padding: 1rem 1.5rem;
+}
+
+.card-header h5 {
+  color: var(--primary-brown);
+  font-weight: 600;
+  margin: 0;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+/* Risk Level Badges */
+.badge.bg-success {
+  background-color: var(--primary-green) !important;
+}
+
+.badge.bg-info {
+  background-color: var(--sage-green) !important;
+}
+
+.badge.bg-warning {
+  background-color: #d4a373 !important;
+  color: #2c1810;
+}
+
+.badge.bg-danger {
+  background-color: #9e5a3a !important;
+}
+
+/* Status Badges */
+.badge-status-normal {
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.badge-status-alert {
+  background-color: #d4a373;
+  color: #2c1810;
+}
+
+.badge-status-warning {
+  background-color: #b97f4b;
+  color: white;
+}
+
+.badge-status-evacuation {
+  background-color: #9e5a3a;
+  color: white;
+}
+
+.table {
+  color: #2c1810;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(107, 140, 92, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.table thead th {
+  background-color: #f5efe5;
+  color: var(--primary-brown);
+  font-weight: 600;
+  border-bottom: 2px solid var(--sage-green);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(158, 90, 58, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(158, 90, 58, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(158, 90, 58, 0);
+  }
+}
+
+.critical-alert {
+  animation: pulse 2s infinite;
+  background: linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%);
+  border-left: 4px solid #9e5a3a;
+  color: #5c3b2a;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #2c1810 0%, #3a2418 100%) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #6b8c5c;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #faf7f0 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #e8e0d5 !important;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #c9a87c !important;
+}
+
+/* Stat Cards */
+.stat-card {
+  background: linear-gradient(135deg, var(--primary-brown) 0%, var(--dark-brown) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(107, 140, 92, 0.2) 0%, rgba(107, 140, 92, 0) 70%);
+  transform: rotate(45deg);
+}
+
+.stat-card .card-title {
+  color: #e8e0d5;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.stat-card h1 {
+  color: #faf7f0;
+  font-weight: 700;
+}
+
+/* Custom Buttons */
+.btn-primary {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--sage-green);
+  border-color: var(--sage-green);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+/* Form Controls */
+.form-control, .form-select {
+  border: 1px solid #e8e0d5;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--sage-green);
+  box-shadow: 0 0 0 3px rgba(107, 140, 92, 0.1);
+  outline: none;
+}
+
+.form-label {
+  color: var(--primary-brown);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Pagination */
+.pagination .page-link {
+  color: var(--primary-brown);
+  border-color: #e8e0d5;
+  background-color: white;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: white;
+}
+
+.pagination .page-link:hover {
+  background-color: #f5efe5;
+  color: var(--dark-brown);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8e0d5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage-green);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green);
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  border: 3px solid #e8e0d5;
+  border-top: 3px solid var(--primary-green);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+footer {
+  background: linear-gradient(135deg, #2c1810 0%, #3a2418 100%) !important;
+  border-top: 2px solid #6b8c5c;
+  color: #e8e0d5 !important;
+}
+
+/* Alert Styles */
+.alert-danger {
+  background-color: #fff5f0;
+  border-color: #d4a373;
+  color: #5c3b2a;
+}
+
+.alert-danger .alert-heading {
+  color: #9e5a3a;
+}
+
+/* Chart Customization */
+canvas {
+  filter: brightness(0.98);
+}
+
+/* Map Container */
+.leaflet-container {
+  border-radius: 12px;
+  border: 1px solid #e8e0d5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .stat-card h1 {
+    font-size: 2rem;
+  }
+}
