@@ -127,7 +127,7 @@ A comprehensive flood monitoring system that tracks water levels, rainfall, and 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/flood-monitoring-system.git
+git clone https://github.com/VarshaVasudevan/flood-mern
 cd flood-monitoring-system
 
 cd server
